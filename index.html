@@ -11,117 +11,91 @@
         body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
         .red-glow { box-shadow: 0 0 20px rgba(220, 38, 38, 0.2); }
         .bg-dark-card { background: #0a0a0a; border: 1px solid #1a1a1a; }
-        .gradient-btn { background: linear-gradient(90deg, #ff0000, #990000); }
+        .gradient-btn { background: linear-gradient(90deg, #ff0000, #990000); color: white !important; }
     </style>
 </head>
 <body class="bg-black text-white">
 
     <nav class="p-5 flex justify-between items-center border-b border-white/5 sticky top-0 bg-black/90 backdrop-blur-md z-50">
         <h1 class="text-xl font-black italic tracking-tighter">SCRIPT<span class="text-red-600">PRO</span></h1>
-        <div class="hidden md:flex space-x-6 text-sm font-bold uppercase tracking-widest text-white">
-            <a href="#home">Home</a>
-            <a href="#samples">Work</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#order">Order</a>
-        </div>
         <a href="#order" class="gradient-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-white">Book Now</a>
     </nav>
 
-    <section id="home" class="py-20 px-6 text-center">
+    <section class="py-20 px-6 text-center">
         <h2 class="text-5xl md:text-7xl font-black mb-6 leading-none">Main likhta hoon aapke liye <br><span class="text-red-600 italic">Viral Scripts!</span></h2>
         <div class="flex flex-wrap justify-center gap-4">
+            <a href="#samples" class="border border-white/20 px-8 py-4 rounded-xl hover:bg-white hover:text-black transition-all font-bold">Samples Dekho</a>
             <a href="#order" class="gradient-btn px-8 py-4 rounded-xl shadow-lg shadow-red-600/20 font-bold text-white">Order Karo @ ₹39</a>
         </div>
     </section>
 
     <section id="samples" class="py-20 bg-[#050505]">
         <div class="max-w-4xl mx-auto px-6">
-            <h3 class="text-3xl font-bold mb-10 flex items-center gap-3 text-white">
-                <span class="w-10 h-1 bg-red-600"></span> Professional Samples
-            </h3>
+            <h3 class="text-3xl font-bold mb-10 flex items-center gap-3">Professional Storytelling</h3>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-dark-card p-8 rounded-3xl border-l-4 border-l-red-600">
-                    <span class="text-red-600 font-bold text-xs uppercase mb-2 block text-white">Crime/Documentary</span>
-                    <p class="text-gray-300 italic text-lg leading-relaxed">"Ye kahani hai us aadmi ki jisne pure system ko hila diya, bina ek bhi goli chalaye..."</p>
+                <div class="bg-dark-card p-8 rounded-3xl border-l-4 border-l-red-600 text-left">
+                    <span class="text-red-600 font-bold text-xs uppercase mb-2 block">Crime/Documentary</span>
+                    <p class="text-gray-300 italic">"Ye kahani hai us aadmi ki jisne pure system ko hila diya, bina ek bhi goli chalaye..."</p>
                 </div>
-                <div class="bg-dark-card p-8 rounded-3xl border-l-4 border-l-red-600">
-                    <span class="text-red-600 font-bold text-xs uppercase mb-2 block text-white">Fact/History</span>
-                    <p class="text-gray-300 italic text-lg leading-relaxed">"1945, ek ship gayab hoti hai, aur 50 saal baad wo waapas aati hai..."</p>
+                <div class="bg-dark-card p-8 rounded-3xl border-l-4 border-l-red-600 text-left">
+                    <span class="text-red-600 font-bold text-xs uppercase mb-2 block">Mystery/Facts</span>
+                    <p class="text-gray-300 italic">"1945, ek ship gayab hoti hai, aur 50 saal baad wo waapas aati hai..."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reviews" class="py-20 bg-black">
-        <div class="max-w-4xl mx-auto px-6">
-            <h3 class="text-3xl font-bold mb-10 text-center text-white">Happy <span class="text-red-600">Creators</span></h3>
-            <div class="grid md:grid-cols-3 gap-4">
-                <div class="bg-dark-card p-6 rounded-2xl text-center">
+    <section id="reviews" class="py-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-10">Customer <span class="text-red-600">Reviews</span></h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-dark-card p-6 rounded-2xl">
                     <div class="text-yellow-500 mb-2">★★★★★</div>
-                    <p class="text-sm text-gray-400 font-bold italic text-white">"Script ki wajah se mere 1M views aaye!"</p>
-                    <p class="text-xs mt-2 text-red-600 font-bold">- Tech Channel</p>
+                    <p class="text-sm italic">"Best script for my documentary!"</p>
                 </div>
-                <div class="bg-dark-card p-6 rounded-2xl text-center">
+                <div class="bg-dark-card p-6 rounded-2xl">
                     <div class="text-yellow-500 mb-2">★★★★★</div>
-                    <p class="text-sm text-gray-400 font-bold italic text-white">"Retention 60% se upar gaya pehli baar."</p>
-                    <p class="text-xs mt-2 text-red-600 font-bold">- Story Vlogger</p>
+                    <p class="text-sm italic">"Retention hit 60% first time."</p>
                 </div>
-                <div class="bg-dark-card p-6 rounded-2xl text-center">
+                <div class="bg-dark-card p-6 rounded-2xl">
                     <div class="text-yellow-500 mb-2">★★★★★</div>
-                    <p class="text-sm text-gray-400 font-bold italic text-white">"Best scriptwriter in this budget."</p>
-                    <p class="text-xs mt-2 text-red-600 font-bold">- Finance Guru</p>
+                    <p class="text-sm italic">"Viral script at low price."</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="order" class="py-20 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
             <div class="bg-dark-card p-8 rounded-[2.5rem] border-red-600/20 red-glow text-center">
-                <h3 class="text-3xl font-bold mb-2 text-white">Step 1: Pay Now</h3>
-                <div class="bg-white p-4 inline-block rounded-3xl mb-4 border-4 border-red-600">
-                    <img src="1000102587.png" alt="UPI QR" class="w-56 h-56 object-contain">
+                <h3 class="text-2xl font-bold mb-6">Step 1: Pay ₹39</h3>
+                <div class="bg-white p-4 inline-block rounded-2xl mb-4">
+                    <img src="cc05e349-9303-41f0-9431-d1b4057443d8.png" alt="QR Code" class="w-56 h-auto mx-auto">
                 </div>
-                <p class="font-mono text-sm text-red-500 mb-2 font-bold">shivlalvishwakarma967@okhdfcbank</p>
+                <p class="text-xs text-red-500 font-bold">shivlalvishwakarma967@okhdfcbank</p>
             </div>
-
-            <div class="bg-dark-card p-8 rounded-[2.5rem] border-white/10">
-                <h3 class="text-3xl font-bold mb-6 text-white text-left">Step 2: Submit Details</h3>
-                <form id="orderForm" class="space-y-4 text-left">
-                    <input type="text" id="name" placeholder="Full Name" required class="w-full bg-black border border-white/10 p-4 rounded-xl text-white outline-none focus:border-red-600">
-                    <input type="text" id="topic" placeholder="YouTube Topic" required class="w-full bg-black border border-white/10 p-4 rounded-xl text-white outline-none focus:border-red-600">
-                    <input type="text" id="txnId" placeholder="Transaction ID (UTR)" required class="w-full bg-black border border-white/10 p-4 rounded-xl text-white outline-none focus:border-red-600">
-                    <button type="button" onclick="sendDetails()" class="w-full gradient-btn py-5 rounded-2xl font-bold text-lg text-white shadow-lg shadow-red-600/30">
-                        SUBMIT & MESSAGE ME
-                    </button>
+            <div class="bg-dark-card p-8 rounded-[2.5rem] border-white/10 text-left">
+                <h3 class="text-2xl font-bold mb-6">Step 2: Submit Details</h3>
+                <form class="space-y-4">
+                    <input type="text" id="name" placeholder="Full Name" class="w-full bg-black border border-white/10 p-3 rounded-xl text-white outline-none focus:border-red-600">
+                    <input type="text" id="topic" placeholder="Video Topic" class="w-full bg-black border border-white/10 p-3 rounded-xl text-white outline-none focus:border-red-600">
+                    <input type="text" id="txn" placeholder="Transaction ID (UTR)" class="w-full bg-black border border-white/10 p-3 rounded-xl text-white outline-none focus:border-red-600">
+                    <button type="button" onclick="send()" class="w-full gradient-btn py-4 rounded-xl font-bold text-white">SUBMIT VIA WHATSAPP</button>
                 </form>
             </div>
         </div>
     </section>
 
     <script>
-        function sendDetails() {
-            const name = document.getElementById('name').value;
-            const topic = document.getElementById('topic').value;
-            const txnId = document.getElementById('txnId').value;
-            const myPhone = "8924080558";
-            const myEmail = "shivanshvishwakarma967@gmail.com";
+        function send() {
+            const n = document.getElementById('name').value;
+            const t = document.getElementById('topic').value;
+            const tx = document.getElementById('txn').value;
+            if(!n || !t || !tx) return alert("Details bharo!");
             
-            if(!name || !topic || !txnId) {
-                alert("Please fill all details!");
-                return;
-            }
-
-            const msg = `*NEW SCRIPT ORDER*%0A*Name:* ${name}%0A*Topic:* ${topic}%0A*Txn ID:* ${txnId}%0A*Amount:* ₹39%0A%0A_Note: Main yahan screenshot bhej raha hoon._`;
-            
-            // 1. WhatsApp trigger (Isse direct aapke number par message jayega)
-            const waLink = `https://wa.me/91${myPhone}?text=${msg}`;
-            window.open(waLink, '_blank');
-            
-            // 2. Email trigger (Isme screenshot mangne wala text add kar diya hai)
-            const subject = `Order from ${name}`;
-            const body = `Name: ${name}%0D%0ATopic: ${topic}%0D%0ATxn ID: ${txnId}%0D%0AAmount: ₹39%0D%0A%0D%0APLEASE ATTACH AND SEND YOUR PAYMENT SCREENSHOT BELOW THIS EMAIL.`;
-            window.location.href = `mailto:${myEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
+            const msg = `*NEW ORDER*%0A*Name:* ${n}%0A*Topic:* ${t}%0A*UTR:* ${tx}%0A%0A*Send Payment Screenshot below*`;
+            window.open(`https://wa.me/918924080558?text=${msg}`);
+            window.location.href = `mailto:shivanshvishwakarma967@gmail.com?subject=New Order from ${n}&body=Topic: ${t}%0D%0AUTR: ${tx}%0D%0A%0D%0ASend Screenshot below!`;
         }
     </script>
 </body>
