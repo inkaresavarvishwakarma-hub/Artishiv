@@ -70,33 +70,60 @@
             <div class="bg-dark-card p-8 rounded-[2.5rem] border-red-600/20 red-glow text-center">
                 <h3 class="text-2xl font-bold mb-6">Step 1: Pay ₹39</h3>
                 <div class="bg-white p-4 inline-block rounded-2xl mb-4">
-                    <img src="kgf.png" alt="QR Code" class="w-56 h-auto mx-auto">
+                    <img src="cc05e349-9303-41f0-9431-d1b4057443d8.png" alt="QR Code" class="w-56 h-auto mx-auto">
                 </div>
                 <p class="text-xs text-red-500 font-bold">shivlalvishwakarma967@okhdfcbank</p>
             </div>
+
             <div class="bg-dark-card p-8 rounded-[2.5rem] border-white/10 text-left">
                 <h3 class="text-2xl font-bold mb-6">Step 2: Submit Details</h3>
                 <form class="space-y-4">
-                    <input type="text" id="name" placeholder="Full Name" class="w-full bg-black border border-white/10 p-3 rounded-xl text-white outline-none focus:border-red-600">
-                    <input type="text" id="topic" placeholder="Video Topic" class="w-full bg-black border border-white/10 p-3 rounded-xl text-white outline-none focus:border-red-600">
-                    <input type="text" id="txn" placeholder="Transaction ID (UTR)" class="w-full bg-black border border-white/10 p-3 rounded-xl text-white outline-none focus:border-red-600">
-                    <button type="button" onclick="send()" class="w-full gradient-btn py-4 rounded-xl font-bold text-white">SUBMIT VIA WHATSAPP</button>
+                    <input type="text" id="userName" placeholder="Full Name" class="w-full bg-black border border-white/10 p-3 rounded-xl text-white outline-none focus:border-red-600">
+                    
+                    <input type="text" id="userTopic" placeholder="YouTube Topic" class="w-full bg-black border border-white/10 p-3 rounded-xl text-white outline-none focus:border-red-600">
+                    
+                    <input type="text" id="userTxn" placeholder="Transaction ID (UTR)" class="w-full bg-black border border-white/10 p-3 rounded-xl text-white outline-none focus:border-red-600">
+                    
+                    <button type="button" onclick="sendToWhatsApp()" class="w-full gradient-btn py-4 rounded-xl font-bold text-white uppercase">
+                        SUBMIT & MESSAGE ME
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
     <script>
-        function send() {
-            const n = document.getElementById('name').value;
-            const t = document.getElementById('topic').value;
-            const tx = document.getElementById('txn').value;
-            if(!n || !t || !tx) return alert("Details bharo!");
-            
-            const msg = `*NEW ORDER*%0A*Name:* ${n}%0A*Topic:* ${t}%0A*UTR:* ${tx}%0A%0A*Send Payment Screenshot below*`;
-            window.open(`https://wa.me/918924080558?text=${msg}`);
-            window.location.href = `mailto:shivanshvishwakarma967@gmail.com?subject=New Order from ${n}&body=Topic: ${t}%0D%0AUTR: ${tx}%0D%0A%0D%0ASend Screenshot below!`;
+    function sendToWhatsApp() {
+        // Input fields se data nikalna
+        const name = document.getElementById('userName').value;
+        const topic = document.getElementById('userTopic').value;
+        const txnId = document.getElementById('userTxn').value;
+        
+        // Aapka Phone Number aur Email (Updated as per your first code)
+        const myPhone = "918924080558"; 
+        const myEmail = "shivanshvishwakarma967@gmail.com";
+
+        if(!name || !topic || !txnId) {
+            alert("Please fill all details!");
+            return;
         }
+
+        // WhatsApp Message Format
+        const msg = `*NEW SCRIPT ORDER*%0A*Name:* ${name}%0A*Topic:* ${topic}%0A*Txn ID:* ${txnId}%0A*Amount:* ₹39%0A%0A_Note: Main yahan screenshot bhej raha hoon._`;
+
+        // 1. WhatsApp Trigger
+        const waLink = `https://wa.me/${myPhone}?text=${msg}`;
+        window.open(waLink, '_blank');
+
+        // 2. Email Trigger
+        const subject = encodeURIComponent(`Order from ${name}`);
+        const body = `Name: ${name}%0D%0ATopic: ${topic}%0D%0ATxn ID: ${txnId}%0D%0AAmount: ₹39%0D%0A%0D%0APLEASE ATTACH AND SEND YOUR PAYMENT SCREENSHOT BELOW THIS EMAIL.`;
+        
+        // Email client kholne ke liye delay (taki pehle WhatsApp khule)
+        setTimeout(() => {
+            window.location.href = `mailto:${myEmail}?subject=${subject}&body=${body}`;
+        }, 1000);
+    }
     </script>
 </body>
 </html>
