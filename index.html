@@ -126,23 +126,4 @@
     </script>
 </body>
 </html>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(!name || !topic || !txnId) {</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert("Please fill all details!");</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
-<p>&nbsp;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const msg = `*NEW SCRIPT ORDER*%0A*Name:* ${name}%0A*Topic:* ${topic}%0A*Txn ID:* ${txnId}%0A*Amount:* ₹39%0A%0A_Note: Main yahan screenshot bhej raha hoon._`;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 1. WhatsApp trigger (Isse direct aapke number par message jayega)</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const waLink = `https://wa.me/91${myPhone}?text=${msg}`;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; window.open(waLink, '_blank');</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 2. Email trigger (Isme screenshot mangne wala text add kar diya hai)</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const subject = `Order from ${name}`;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const body = `Name: ${name}%0D%0ATopic: ${topic}%0D%0ATxn ID: ${txnId}%0D%0AAmount: ₹39%0D%0A%0D%0APLEASE ATTACH AND SEND YOUR PAYMENT SCREENSHOT BELOW THIS EMAIL.`;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; window.locat</p>
-<p>ion.href = `mailto:${myEmail}?subject=${encodeURIComponent(subject)}&amp;body=${body}`;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-<p>&nbsp; &nbsp; &lt;/script&gt;</p>
-<p>&lt;/body&gt;</p>
-<p>&lt;/html&gt;</p></body></html>
+
